@@ -1,0 +1,25 @@
+//you can also add function like features to scss called mixin
+@mixin flexcenter($direction, $background) {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: $direction;
+    background: $background;
+}
+
+
+header {
+    @include flexcenter(column, red);
+    height: 100vh;
+    color: $textColor;
+    
+
+    // you can nest properties in sass aswell
+    button { 
+        background: $primaryBtn;
+        &:hover{
+            background: red;
+        }
+
+    }
+}

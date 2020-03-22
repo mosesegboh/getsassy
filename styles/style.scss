@@ -1,0 +1,18 @@
+//you can use variables is scss aswell
+@import "./variables";
+
+@import "./header";
+
+
+.contact{
+    //we can also extend properties from another element in sass
+    @extend header;
+
+    //you can overide the extended styles by writing them below
+
+    @include flexcenter(row, blue);
+
+    //you can also do different mathematical calculations e.g
+    width: 100% - 20%;
+
+}
